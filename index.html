@@ -6,33 +6,35 @@
   </head>
   <body>
      <header>
-       <article>
+       <section>
          <h2>Помощь по сайту</h2>
          <a href="#">
           <img src="logo.svg" width="220" height="47" alt="логотип">
          </a>
-         <img src="search.svg" width="17" height="17" alt="поиск">
-         <p>Поиск:</p>
+         <ul>
+          <li>
+              <p>Поиск:</p>
+           </li>
+           <li>
+              <a href="#">Закладки: 0</a>
+           </li>
+           <li>
+              <a href="#">Корзина: 0</a>
+           </li>
+          </ul>
+          <button type="button">Оформить заказ</button>
+       </section>
+       <section>
+           <h1>Интернет-магазин<br> строительных материалов <br> и инструментов для ремонта</h1>
 
-         <img src="zakladki.svg" width="14" height="15" alt="закладки">
-         <p>Закладки: 0</p>
 
-         <img src="korzina.svg" width="15" height="15" alt="корзина">
-         <p>Корзина: 0</p>
-         <button type="button">Оформить заказ</button>
-       </article>
-       <article>
-         <h2>кратко магазине</h2>
-          <p>
-             Интернет-магазин<br> строительных материалов <br> и инструментов для ремонта
-          </p>
-          <img src="tel.svg" width="17" height="18" alt="телефон">
-          <a href="#"><p>+7(812)555-05-55</p></a>
+
+          <a href="+7(812)555-05-55">+7(812)555-05-55</a>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <img src="vhod.svg" width="19" height="17" alt="вход">
-          <button type="button"><img src="vhod.svg" width="121" height="45" alt="вход"></button>
-          <button type="button">Регистрация</button>
-       </article>
+
+          <a href="#">войти</a>
+          <a href="#">Регистрация</a>
+       </section>
         <nav>
            <ul>
              <li><a href="#">Главная</a></li>
@@ -46,29 +48,30 @@
         </nav>
      </header>
      <main>
-      <h1>Техномарт</h1>
+
       <section>
         <h2>Слайдер</h2>
         <article>
           <h3>Материалы</h3>
-          <img src="#" width="44" height="65" alt="банка краски">
-          <img src="#" width="70" height="70" alt="new">
-          <button type="button">на любой вкус</button>
+
+          <img src="#" width="70" height="70" alt="new"><!-- планировал вырезать картинку и вставлять куда попало.
+                                                              по тех. заданию может быть у любого товара-->
+          <a href="#">на любой вкус</a>
         </article>
         <article>
           <h3>Инструменты</h3>
-          <img src="#" width="75" height="61" alt="шуруповерт">
-          <button type="button">на все случаи</button>
+
+          <a href="#">на все случаи</a>
         </article>
         <article>
           <h3>Техника</h3>
-          <img src="#" width="78" height="62" alt="трактор">
-          <button type="button">для стройки</button>
+
+          <a href="#">для стройки</a>
         </article>
         <article>
           <h3>Скидки 50%</h3>
-          <img src="#" width="59" height="72" alt="тележка">
-          <button type="button">на 350 товаров</button>
+
+          <a href="#">на 350 товаров</a>
         </article>
         <article>
           <div>
@@ -76,12 +79,12 @@
            <P>Настоящие мужские игрушки</P>
          </div>
           <img src="#" width="620" height="266" alt="перфоратор">
-          <a href="catalog.html"><p>открыть каталог</p></a>
+          <a href="catalog.html">открыть каталог</a>
         </article>
         <article>
           <h3>Доставка</h3>
-          <img src="#" width="78" height="63" alt="доставка">
-          <button type="button">бесплатно</button>
+
+          <a href="#">бесплатно</a>
         </article>
       </section>
 
@@ -126,28 +129,44 @@
         </div>
         <ul>
           <li>
-            <img src="#" width="220" height="145" alt="BOSCH">
+            <a href="#">
+             <img src="#" width="220" height="145" alt="BOSCH">
+            </a>
           </li>
           <li>
-            <img src="#" width="123" height="40" alt="makita">
+            <a href="#">
+             <img src="#" width="123" height="40" alt="makita">
+            </a>
           </li>
           <li>
-            <img src="#" width="146" height="44" alt="DeWALT">
+            <a href="#">
+             <img src="#" width="146" height="44" alt="DeWALT">
+            </a>
           </li>
           <li>
-            <img src="#" width="200" height="75" alt="интерскол">
+            <a href="#">
+             <img src="#" width="200" height="75" alt="интерскол">
+            </a>
           </li>
           <li>
-            <img src="#" width="169" height="31" alt="HITACHI">
+            <a href="#">
+             <img src="#" width="169" height="31" alt="HITACHI">
+            </a>
           </li>
           <li>
-            <img src="#" width="121" height="73" alt="LG">
+            <a href="#">
+             <img src="#" width="121" height="73" alt="LG">
+            </a>
           </li>
           <li>
-            <img src="#" width="151" height="96" alt="AEG power solution">
+            <a href="#">
+             <img src="#" width="151" height="96" alt="AEG power solution">
+            </a>
           </li>
           <li>
-            <img src="#" width="204" height="69" alt="metabo">
+            <a href="#">
+             <img src="#" width="204" height="69" alt="metabo">
+            </a>
           </li>
         </ul>
       </section>
@@ -158,8 +177,13 @@
            Мы стараемся изо всех сил, чтобы сделать
            ваши покупки приятными.</p>
            <ul>
+             <li><button type="button">Доставка</button></li>
+             <li><button type="button">Гарантия</button></li>
+             <li><button type="button">Кредит</button></li>
+           </ul>
+           <ul>
             <li>
-              <button type="button">Доставка</button>
+
               <h3>ДОСТАВКА</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
                к вашему подъезду совершенно бесплатно!<br>
@@ -169,15 +193,15 @@
               <img src="#" width="468" height="261" alt="доставка">
             </li>
             <li>
-              <button type="button">Гарантия</button>
+              Гарантия(описание)
             </li>
             <li>
-              <button type="button">Кредит</button>
+              Кредит(описание)
             </li>
           </ul>
-         </section>
+      </section>
 
-         <section>
+      <section>
            <h2>О компании</h2>
            <article>
              <h3>КОМПАНИЯ «Техномарт»</h3>
@@ -185,23 +209,26 @@
                Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
                ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
                 гастарбайтерах.
-
+             </p>
+             <p>
                Мы можем доставить ваш товар в самые отдаленные точки России!<br>
                Техномарт работает со многими транспортными компаниями:
              </p>
-             <p>Деловые линии</p>
-             <p>Автотрейдинг</p>
-             <p>ЖелДорЭкспедиция</p>
-             <button type="button">Подробнее о компании</button>
+             <ul>
+               <li>Деловые линии</li>
+               <li>Автотрейдинг</li>
+               <li>ЖелДорЭкспедиция</li>
+           </ul>
+             <a href="#">Подробнее о компании</a>
            </article>
            <article>
              <h3>КОНТАКТЫ</h3>
              <p>Вы можете забрать товар сами,
                 заехав в наш офис:</p>
              <img src="#" width="300" height="158" alt="карта">
-             <button type="button">Заблудились? НАПИШИТЕ НАМ!</button>
+             <a href="#">Заблудились? НАПИШИТЕ НАМ!</a>
            </article>
-         </section>
+      </section>
      </main>
 
      <footer>
@@ -228,15 +255,23 @@
         </ul>
         <div>
           <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
-          <a href="#">
-            <img src="#" alt="вконтакте">
-          </a>
-          <a href="#">
-            <img src="#" alt="фейсбук">
-          </a>
-          <a href="#">
-            <img src="#" alt="инстаграм">
-          </a>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="#" alt="вконтакте">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="#" alt="фейсбук">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="#" alt="инстаграм">
+              </a>
+            </li>
+        </ul>
           <p>Обратная связь:<br><a href=" mail@htmlacademy.ru"> mail@htmlacademy.ru</a></p>
           <p>Разработано —<a href="https://htmlacademy.ru/intensive/htmlcss"> htmlacademy.ru</a></p>
         </div>
