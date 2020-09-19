@@ -87,15 +87,15 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: var(--black);
-  background-color: var(--Basic-background);
-  text-align: center;
+  background-color: var(--white);
+  text-align: left;
 
   img {
     max-width: 100%;
     height: auto;
   }
 
-  a {
+a {
     text-decoration: none;
   }
 
@@ -106,7 +106,8 @@ body {
   margin: 0;
   Width: 1200px;
   Height: 320px;
-  background-color: var(--background-color-header);
+  background-color: var(--black); /*background-color-header*/
+  color: var(--white);
 }
 
 .site-help {
