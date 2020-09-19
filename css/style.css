@@ -88,18 +88,20 @@ body {
   font-weight: 400;
   color: var(--black);
   background-color: var(--white);
-  text-align: left;
+  text-align: center;
 
-  img {
+img {
     max-width: 100%;
     height: auto;
   }
-
-a {
+  a {
     text-decoration: none;
-  }
+    }
 
-
+ul,
+ ol {
+       list-style: none;
+    }
 /*header*/
 
 .main-header {
@@ -123,9 +125,7 @@ a {
   padding-bottom: 9px
 }
 
-ul, ol {
-   list-style: none;
-}
+
 
 .button-header {
   Width: 150px;
