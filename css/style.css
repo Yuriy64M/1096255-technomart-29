@@ -88,6 +88,7 @@ body {
   font-weight: 400;
   color: var(--black);
   background-color: var(--Basic-background);
+  text-align: center;
 
   img {
     max-width: 100%;
