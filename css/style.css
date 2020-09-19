@@ -1,0 +1,158 @@
+:root{
+    --Basic-background: #F1F5F7;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --navigation-focus: #293449;
+    --navigation: #32425C;
+    --navigation-click: #1D2739;
+    --navigation-box-shadow: inset 0px -5px 0px #293449;
+    --text-navigation-click: #FFFFFF; /* opacity: 0.5(прозрачность)*/
+
+    --button-header-click: #161D29;
+    --checkout: #63A63E;      /*--checkout-click: #63A63E; */
+    --checkout-focus: #5FBB2D;
+    --checkout-text-click: rgba(255, 255, 255, 0.5);
+
+    --background-color-header: rgba(0, 0, 0, 0.0001);
+    --red: #EE3643;         /*красный*/
+    --red-click: #BA2732;
+    --text-navigation-click: rgba(255, 255, 255, 0.5);
+    --red-box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+    --red-button-focus: #CA2C37;
+
+    --phone: #F3F7F9;
+    --adress-text: #32425C;
+
+    --exit-picture: #C5C5C5; /*и текст тоже*/
+    --exit-picture-focus: #3D546F;
+
+    --slider-item-slid1: #FFBF47;
+    --slider-item-slid2: #3BBCE3;
+    --slider-item-slid3: #DC91D8;
+    --slider-item-slid4: #8ED78F;
+    --slider-item-slid5: #FFC047;
+    --slider-item-slid-button: #FFFFFF; /* opacity: 0.3(прозрачность)*/
+    --slider-item-slid-button-focus: #C5C5C5; /* opacity: 0.3(прозрачность)*/
+    --slider-item-slid-button-click: #A9A9A9; /* opacity: 0.3(прозрачность)*/
+    --slider-picture-head: rgba(0, 0, 0, 0.25);
+
+    --popular-head-background: #F9F5F0;
+    --popular-head-text: #32425C;
+    --popular-producer-item-border: 1px solid #EAEAEA;
+    --popular-producer-item-shadow: ;      /*как определить тень не ясно*/
+
+    --products-item-price-text-cross: #A9A9A9;
+
+    --services-item-shadow:  0px 1px 0px #FFFFFF;
+    --services-item-button-buy: #518534;
+    --services-item-button-buy-shadow: inset 0px -3px 0px #367315;
+    --product-marker-text: #32425C; /*повторяет popular-head-text*/
+    --product-marker-border: 3px solid #63A63E;
+    --product-marker-border-focus: 3px solid #32425C;
+    --product-marker-border-click:  3px solid #32425C; /*click и focus цвета рамок разные, но подписаны одинаково*/
+        /*как определить тень не ясно*/
+
+    --popular-producer-item: 1px solid #EAEAEA; /*повторяет popular-producer-item-border*/
+
+    --filter-background: #F7F3EC;
+
+    --page-product-list-border: 1px solid #E5E5E5;
+    --page-product-list-border-focus: 1px solid #C5C5C5;
+    --page-product-list-border-click: 1px solid #EE3643; /*красная рамка*/
+
+    --checkbox: #C5C5C5;
+    --checkbox-focus: #B5B5B5;
+    --checkbox-click: #B5B5B5; /*меняет прозрачность. наверное*/
+
+    --services-item: #32425C;
+    --box-shadow-services: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+    --services-item-focus: #293449; /*повторяет navigation-focus*/
+    --box-shadow-services-click: 0px 1px 0px #FFFFFF;
+
+    --footer-background: #32425C;
+    --footer-text-color-nav: #F1F5F7; /*почти белый. При клике opacity: 0.5*/
+
+    --footer-text-color-pagination: #FFD180; /*желтый. При клике opacity: 0.5*/
+}
+
+/*общее*/
+
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--Basic-background);
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+
+/*header*/
+
+.main-header {
+  margin: 0;
+  Width: 1200px;
+  Height: 320px;
+  background-color: var(--background-color-header);
+}
+
+.site-help {
+  Width: 1200px;
+  Height: 42px;
+  background-color: var(--navigation-focus);
+  font-size: 18px;
+  Line Height: 24px;
+  color: var(--white);
+  padding-left: 130px;
+  padding-right: 130px;
+  padding-top: 9px;
+  padding-bottom: 9px
+}
+
+ul, ol {
+   list-style: none;
+}
+
+.button-header {
+  Width: 150px;
+  Height: 42px;
+  text-align: center;
+}
+
+.button-header markbook:active {
+  background-color: var(--navigation-click);
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.button-header:active {
+  background-opacity: 0.5;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.checkout {
+  background-color: var(--checkout);
+  }
+
+  .checkout:hover{
+  background-color: var(--checkout-focus);
+    }
+
+.checkout:active {
+  background-color: var(--navigation-click);
+  color: var(--white);
+  opacity: 0.5;
+}
