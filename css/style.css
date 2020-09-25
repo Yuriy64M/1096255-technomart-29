@@ -3,6 +3,7 @@
     --white: #FFFFFF;
     --black: #000000;
 
+    --main-header: 000000 0,01 %;
     --navigation-focus: #293449;
     --navigation: #32425C;
     --navigation-click: #1D2739;
@@ -40,7 +41,7 @@
     --popular-head-background: #F9F5F0;
     --popular-head-text: #32425C;
     --popular-producer-item-border: 1px solid #EAEAEA;
-    --popular-producer-item-shadow: ;      /*как определить тень не ясно*/
+    --popular-producer-item-shadow: ;                                    /*как определить тень не ясно*/
 
     --products-item-price-text-cross: #A9A9A9;
 
@@ -50,7 +51,7 @@
     --product-marker-text: #32425C; /*повторяет popular-head-text*/
     --product-marker-border: 3px solid #63A63E;
     --product-marker-border-focus: 3px solid #32425C;
-    --product-marker-border-click:  3px solid #32425C; /*click и focus цвета рамок разные, но подписаны одинаково*/
+    --product-marker-border-click:  3px solid #32425C;
         /*как определить тень не ясно*/
 
     --popular-producer-item: 1px solid #EAEAEA; /*повторяет popular-producer-item-border*/
@@ -74,79 +75,93 @@
     --footer-text-color-nav: #F1F5F7; /*почти белый. При клике opacity: 0.5*/
 
     --footer-text-color-pagination: #FFD180; /*желтый. При клике opacity: 0.5*/
+    --social-item: linear-gradient(0deg, #212A3A, #212A3A);
+    --heading-catalog: #F2F6F8;
 }
 
+
+}
 /*общее*/
 
 body {
-  min-width: 940px;
-  margin: 0;
-  padding: 0;
+
   font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  color: var(--black);
   background-color: var(--white);
-  text-align: center;
+}
 
 img {
     max-width: 100%;
     height: auto;
   }
-  a {
+ a {
     text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--white);
     }
 
 ul,
  ol {
        list-style: none;
     }
+
+h3 {
+  font-size: 30px;
+  Line Height: 30px;
+}
+
 /*header*/
 
 .main-header {
-  margin: 0;
-  Width: 1200px;
-  Height: 320px;
-  background-color: var(--black); /*background-color-header*/
+  background-color: var(--Basic-background); /*background-color-header*/
   color: var(--white);
 }
 
+
+
 .site-help {
-  Width: 1200px;
-  Height: 42px;
+
   background-color: var(--navigation-focus);
   font-size: 18px;
   Line Height: 24px;
+  font-weight: 400;
   color: var(--white);
-  padding-left: 130px;
-  padding-right: 130px;
-  padding-top: 9px;
-  padding-bottom: 9px
+  }
+
+.site-help li {
+  Font Size: 18px;
+  Line Height: 24px;
+  background-color: var(--navigation-focus);
 }
 
-
+.site-help li:hover,
+.site-help li:active {
+  background-color: var(--button-header-click);
+  color: var(--white);
+  opacity: 0.5;
+}
 
 .button-header {
   Width: 150px;
   Height: 42px;
-  text-align: center;
 }
 
 .button-header markbook:active {
-  background-color: var(--navigation-click);
-  color: var(--white);
-  opacity: 0.5;
+  background-color: var(--button-header-click);
+  color: var(--checkout-text-click);
 }
 
-.button-header:active {
-  background-opacity: 0.5;
+.button-more {
   color: var(--white);
-  opacity: 0.5;
+  background-color: var(--red);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .checkout {
   background-color: var(--checkout);
+  color: var(--white);
   }
 
   .checkout:hover{
@@ -154,7 +169,415 @@ ul,
     }
 
 .checkout:active {
-  background-color: var(--navigation-click);
+  background-color: var(--checkout);
+  color: var(--checkout-text-click);
+}
+
+.search:hover {
+  background-color: var(--button-header-click);
+  color: var(--checkout-text-click);
+
+}
+
+.search:focus {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.check-in {
+  background-color: var(--background-color-header);
+  color: var(--black);
+}
+
+.check-in:hover {
+  color: var(--red);
+}
+
+.check-in:active {
+  color: var(--exit-picture);
+}
+
+.name {
+  background-color: var(--background-color-header);
+  color: var(--black);                                                           /*не работает*/
+}
+.Personal-Area,
+.My-orders {
+  color: var(--navigation);  /*как поставить точку между ссылками*/                         /*не работает*/
+}
+
+.name:hover {} /*потемнение иконок(иконок нет пока)*/
+
+.Personal-Area:hover,
+ .My-orders:hover{
+  color: var(--red);                                                                    /*не работает*/
+}
+
+.heading-filter {
+Size: 13px;
+Line Height: 18px;
+color: var(--black);
+background-color: var(--filter-background);
+}
+
+.button-show {
+  Size: 13px;
+  Line Height: 18px;
+  color: var(--black);
+  background-color: var(--white);
+  border: var(--page-product-list-border);
+}
+
+
+.filter-type {
+  Size: 17px;
+  Line Height: 30px;
+  color: var(--black);
+  }
+
+.checkbox {
+  Size: 15px;
+  Line Height: 19px;
+  color: var(--black);
+}
+
+.checkbox:active {
+  opacity: 0.4;
+}
+
+.radiopoint {
+  Size: 15px;
+  Line Height: 19px;
+  color: var(--black);
+}
+
+.radiopoint:active {
+  opacity: 0.4;
+}
+
+.sorting-heading {
+  color: var(--black);
+  background-color: var(--white);
+  Font Size: 13px;                                                      /*не работает*/
+  Line Height: 18px;
+}
+
+.heading-catalog {
+  color: var(--navigation);
+  background-color: var(--heading-catalog);
+  Font Size: 30px;
+  Line Height: 30px;
+}
+
+
+
+
+.Personal-Area {
+  text-decoration: underline;
+}
+
+.Personal-Area:active,
+.name:active,
+.My-orders:active {
+ color: var(--exit-picture);
+}
+
+
+ h1 {
+  Font Style: italic;                                                      /*не работает*/
+  Font Size: 16px;                                                         /*не работает*/
+  Line Height: 23px;                                                       /*не работает*/
+  color: var(--red);
+}
+
+.phone {
+  color: var(--red);
+  border: 3px solid var(--white);
+}
+
+.section-navigation p {
+  Font Size: 14px;
+  Line Height: 24px;
+  color: var(--adress-text);
+}
+
+.check-in {
+  color: var(--black);
+  background-color: var(--white);
+  Font Size: 21px;                                                      /*не работает*/
+  Line Height: 21px;                                                      /*не работает*/
+}
+
+.check-in:hover {
+  color: var(--red);
+}
+
+.check-in:active {
+  color: var(--exit-picture);
+}
+
+.main-navigation {
+  background-color: var(--navigation);
+}
+
+.navigation-item:hover {
+    background-color: var(--navigation-focus);
+}
+
+.navigation-item:active {
+    background-color: var(--navigation-click);
+    opacity: 50%;
+}
+
+
+/*main*/
+.slider-list a {
+color: var(--white);                                                /*невидно надписей на кнопках*/
+
+}
+
+
+.slider {
   color: var(--white);
+  Size: 14px;
+  Line Height: 18px;
+
+}
+
+.slid1 {
+  background-color: var(--slider-item-slid1);
+}
+
+.slid2 {
+  background-color: var(--slider-item-slid2);
+}
+
+.slid3 {
+  background-color: var(--slider-item-slid3);
+}
+
+.slid4 {
+  background-color: var(--slider-item-slid4);
+}
+
+.slid5 {
+  background-color: var(--slider-item-slid5);
+}
+
+
+.slider-button {
+  text-transform: uppercase;
+  background-color: var(--slider-item-slid-button);
+  opacity: 30%;                                                                /*невидно надписей на кнопках*/
+}
+
+.slider-button:hover {
+  background-color: var(--slider-item-slid-button-focus);
+}
+
+.slider-button:active {
+  background-color: var(--slider-item-slid-button-click);
+}
+
+
+
+.button-more:hover {
+  color: var(--white);
+  background-color: var(--red-button-focus);
+}
+
+.button-more:active {
+  color: var(--white);
+  background-color: var(--red-click);
+}
+
+.text-piсture-slider {
+  color: var(--white);
+  font-size: 36px;
+  line-height: 36px;
+  background-color: var(--slider-picture-head);
+}
+
+.popular-head {
+  color: var(--popular-head-text);
+  font-size: 30px;
+  line-height: 30px;
+  background-color: var(--popular-head-background);
+  text-transform: uppercase;
+  }
+
+.products-item {
+  border: var(--popular-producer-item-border);
+}
+
+.products-item p {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.products-item del {
+  color: var(--products-item-price-text-cross);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.products-item-price {
+  color: var(--white);                                                      /*осталось черным*/
+  font-size: 17px;
+  line-height: 18px;
+  background-color: var(--red);
+  text-transform: uppercase;
+}
+
+.products-item:hover {
+                                                         /*как сделать не понятно*/
+}
+
+.product-buy {
+  color: var(--white);                                                       /*осталось черным*/
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--checkout);
+  text-transform: uppercase;
+  /*как делать тень хз*/
+}
+
+.product-buy:hover {
+  background-color: var(--checkout-focus);
+}
+
+.product-buy:active {
+  background-color: var(--services-item-button-buy);
+}
+
+.product-marker {
+  color: var(--navigation);                                                          /*осталось черным*/
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--white);
+  border: var(--product-marker-border);
+  text-transform: uppercase;
+}
+
+.product-marker:hover {
+  border: var(--product-marker-border-focus);
+}
+
+.product-marker:active {
+    border: var(--product-marker-border-focus);
+    opacity: 0.3;
+}
+
+
+.popular-producer-item {
+  border: var(--popular-producer-item-border);
+}
+
+.popular-producer-item:active {
+  opacity: 0.3;
+}
+
+.popular-producer-item:hover {
+                                   /*как сделать не понятно*/
+}
+
+.services {
+  background-color: var(--footer-text-color-nav);
+  color: var(--black);
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services h2{
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.services-item {
+  background-color: var(--navigation-focus);
+  color: var(--white);
+}
+
+.services-discription-item {
+  background-color: var(--footer-text-color-nav);
+  color: var(--adress-text);
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.services-item:hover {
+    background-color: var(--navigation-focus);
+}
+
+.services-item:active {
+    background-color: var(--white);
+    color: var(--popular-head-text);
+}
+
+.services-discription-item h3 {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--adress-text);
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+/*подвал*/
+
+.main-footer {
+background-color: var(--footer-background);
+color: var(--Basic-background);
+font-size: 18px;
+line-height: 24px;
+}
+
+.main-footer p{
+color: var(--phone);
+}
+
+.pagination-list a {
+  color: var(--footer-text-color-pagination);
+}
+
+.footer-navigation a:hover,
+ .pagination-list a:hover,
+ .footer-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation a:active,
+.pagination-list a:active {
   opacity: 0.5;
+}
+
+.footer-footer {
+  background-color: var(--footer-background);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-footer a {
+  color: var(--footer-text-color-pagination);
+}
+
+.footer-footer a:active {
+  color: var(--red-click);
+}
+
+.socials-item {
+  background-color: var(--social-item);
+}
+
+.socials-item:hover
+.socials-item:active {
+  background-color: var(--red);
 }
