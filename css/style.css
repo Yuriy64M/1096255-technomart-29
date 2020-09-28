@@ -84,7 +84,6 @@
 /*общее*/
 
 body {
-
   font-family: "Cuprum", Arial, sans-serif;
   background-color: var(--white);
 }
@@ -93,21 +92,32 @@ img {
     max-width: 100%;
     height: auto;
   }
+
  a {
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
     color: var(--white);
     }
+.logotype {
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+  background-color: var(--red);
+}
 
-ul,
- ol {
-       list-style: none;
+.logotype:active {
+  background-color: var(--red-click);
+}
+
+.list {
+  list-style: none;
     }
 
-h3 {
+.heading-catalog {
   font-size: 30px;
-  Line Height: 30px;
+  Line-Height: 30px;
+  text-transform: uppercase;
 }
 
 /*header*/
@@ -117,10 +127,7 @@ h3 {
   color: var(--white);
 }
 
-
-
 .site-help {
-
   background-color: var(--navigation-focus);
   font-size: 18px;
   Line Height: 24px;
@@ -176,12 +183,17 @@ h3 {
 .search:hover {
   background-color: var(--button-header-click);
   color: var(--checkout-text-click);
-
 }
 
 .search:focus {
   background-color: var(--white);
   color: var(--black);
+}
+
+.search::before {                                                    /*значек поиска не отображается*/
+  content: "";
+  background-color: var(--white);
+  background-image: url(img/icon-search.svg);
 }
 
 .check-in {
@@ -201,43 +213,45 @@ h3 {
   background-color: var(--background-color-header);
   color: var(--black);                                                           /*не работает*/
 }
-.Personal-Area,
-.My-orders {
+
+.personal-area,
+.my-orders {
   color: var(--navigation);  /*как поставить точку между ссылками*/                         /*не работает*/
 }
 
 .name:hover {} /*потемнение иконок(иконок нет пока)*/
 
-.Personal-Area:hover,
- .My-orders:hover{
+.personal-area:hover,
+ .my-orders:hover{
   color: var(--red);                                                                    /*не работает*/
 }
 
 .heading-filter {
-Size: 13px;
-Line Height: 18px;
+font-Size: 13px;
+Line-Height: 18px;
 color: var(--black);
 background-color: var(--filter-background);
+text-transform: uppercase;
 }
 
 .button-show {
-  Size: 13px;
-  Line Height: 18px;
+  font-Size: 13px;
+  Line-Height: 18px;
   color: var(--black);
   background-color: var(--white);
   border: var(--page-product-list-border);
 }
 
-
 .filter-type {
-  Size: 17px;
+  font-Size: 17px;
   Line Height: 30px;
   color: var(--black);
+  text-transform: uppercase;
   }
 
 .checkbox {
-  Size: 15px;
-  Line Height: 19px;
+  font-Size: 15px;
+  Line-Height: 19px;
   color: var(--black);
 }
 
@@ -246,8 +260,8 @@ background-color: var(--filter-background);
 }
 
 .radiopoint {
-  Size: 15px;
-  Line Height: 19px;
+  font-Size: 15px;
+  Line-Height: 19px;
   color: var(--black);
 }
 
@@ -258,19 +272,17 @@ background-color: var(--filter-background);
 .sorting-heading {
   color: var(--black);
   background-color: var(--white);
-  Font Size: 13px;                                                      /*не работает*/
-  Line Height: 18px;
+  Font-Size: 13px;                                                      /*не работает*/
+  Line-Height: 18px;
+  text-transform: uppercase;
 }
 
 .heading-catalog {
   color: var(--navigation);
   background-color: var(--heading-catalog);
-  Font Size: 30px;
-  Line Height: 30px;
+  Font-Size: 30px;
+  Line-Height: 30px;
 }
-
-
-
 
 .Personal-Area {
   text-decoration: underline;
@@ -284,9 +296,9 @@ background-color: var(--filter-background);
 
 
  h1 {
-  Font Style: italic;                                                      /*не работает*/
-  Font Size: 16px;                                                         /*не работает*/
-  Line Height: 23px;                                                       /*не работает*/
+  Font-Style: italic;
+  Font-Size: 16px;
+  Line-Height: 23px;
   color: var(--red);
 }
 
@@ -296,16 +308,16 @@ background-color: var(--filter-background);
 }
 
 .section-navigation p {
-  Font Size: 14px;
-  Line Height: 24px;
+  Font-Size: 14px;
+  Line-Height: 24px;
   color: var(--adress-text);
 }
 
 .check-in {
   color: var(--black);
   background-color: var(--white);
-  Font Size: 21px;                                                      /*не работает*/
-  Line Height: 21px;                                                      /*не работает*/
+  Font-Size: 21px;                                                      /*не работает*/
+  Line-Height: 21px;                                                      /*не работает*/
 }
 
 .check-in:hover {
@@ -336,11 +348,14 @@ color: var(--white);                                                /*невид
 
 }
 
+.slider-piсture {
+  background-image: url(img/слайдер/perf.png);       /*не отображается*/
+}
 
 .slider {
   color: var(--white);
   Size: 14px;
-  Line Height: 18px;
+  Line-Height: 18px;
 
 }
 
@@ -379,8 +394,11 @@ color: var(--white);                                                /*невид
   background-color: var(--slider-item-slid-button-click);
 }
 
-
-
+.slider-button-color  {
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 100%;                                                                /*невидно надписей на кнопках*/
+}
 .button-more:hover {
   color: var(--white);
   background-color: var(--red-button-focus);
@@ -424,17 +442,15 @@ color: var(--white);                                                /*невид
   line-height: 18px;
 }
 
-.products-item-price {
-  color: var(--white);                                                      /*осталось черным*/
+.products-item p:last-of-type {
+  color: var(--white);
   font-size: 17px;
   line-height: 18px;
   background-color: var(--red);
   text-transform: uppercase;
 }
 
-.products-item:hover {
-                                                         /*как сделать не понятно*/
-}
+.products-item:hover {}                                                        /*как сделать не понятно*/
 
 .product-buy {
   color: var(--white);                                                       /*осталось черным*/
@@ -470,7 +486,6 @@ color: var(--white);                                                /*невид
     border: var(--product-marker-border-focus);
     opacity: 0.3;
 }
-
 
 .popular-producer-item {
   border: var(--popular-producer-item-border);
@@ -524,11 +539,6 @@ color: var(--white);                                                /*невид
   color: var(--adress-text);
   text-transform: uppercase;
 }
-
-
-
-
-
 
 /*подвал*/
 
