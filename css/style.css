@@ -99,12 +99,12 @@ img {
     vertical-align: middle;
     color: var(--white);
     }
-.logotype {
+/*.logotype {
   text-align: center;
   vertical-align: middle;
   padding: 20px;
   background-color: var(--red);
-}
+}*/                                                                  /*затемнение*/
 
 .logotype:active {
   background-color: var(--red-click);
@@ -193,7 +193,7 @@ img {
 .search::before {                                                    /*значек поиска не отображается*/
   content: "";
   background-color: var(--white);
-  background-image: url(img/icon-search.svg);
+  background-image: url("../img/icon-search.svg");
 }
 
 .check-in {
@@ -345,11 +345,6 @@ text-transform: uppercase;
 /*main*/
 .slider-list a {
 color: var(--white);                                                /*невидно надписей на кнопках*/
-
-}
-
-.slider-piсture {
-  background-image: url(img/слайдер/perf.png);       /*не отображается*/
 }
 
 .slider {
