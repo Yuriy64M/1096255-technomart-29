@@ -99,12 +99,13 @@ img {
     vertical-align: middle;
     color: var(--white);
     }
+
 /*.logotype {
   text-align: center;
   vertical-align: middle;
   padding: 20px;
   background-color: var(--red);
-}*/                                                                  /*затемнение*/
+}*/                                                                  /*затемнение?*/
 
 .logotype:active {
   background-color: var(--red-click);
@@ -153,9 +154,25 @@ img {
   Height: 42px;
 }
 
-.button-header markbook:active {
+.basket::before {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-cart.svg");
+}
+
+.markbook:active {
   background-color: var(--button-header-click);
   color: var(--checkout-text-click);
+}
+
+.markbook::before {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-bookmark.svg");
 }
 
 .button-more {
@@ -190,9 +207,11 @@ img {
   color: var(--black);
 }
 
-.search::before {                                                    /*значек поиска не отображается*/
+.search::before {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
   content: "";
-  background-color: var(--white);
   background-image: url("../img/icon-search.svg");
 }
 
@@ -211,7 +230,31 @@ img {
 
 .name {
   background-color: var(--background-color-header);
-  color: var(--black);                                                           /*не работает*/
+  color: var(--black);
+}                                                                                     /*не работает*/
+
+.name::before {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-user.svg");
+}
+
+.name::after {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-login.svg");
+}
+
+.home {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-home.svg");
 }
 
 .personal-area,
@@ -307,6 +350,14 @@ text-transform: uppercase;
   border: 3px solid var(--white);
 }
 
+.phone::before {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-phone.svg");
+}
+
 .section-navigation p {
   Font-Size: 14px;
   Line-Height: 24px;
@@ -318,6 +369,14 @@ text-transform: uppercase;
   background-color: var(--white);
   Font-Size: 21px;                                                      /*не работает*/
   Line-Height: 21px;                                                      /*не работает*/
+}
+
+.come::before {
+  display:block;
+  width:20px;
+  height:20px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-login.svg");
 }
 
 .check-in:hover {
@@ -354,26 +413,98 @@ color: var(--white);                                                /*невид
 
 }
 
-.slid1 {
+.slid-one {
   background-color: var(--slider-item-slid1);
+  }
+
+.slid-one div::after {
+  display:block;
+  width: 44px;
+  height: 65px;
+  content: "";
+  background-image: url("../img/slider/icon-1.svg");
 }
 
-.slid2 {
+.slid-one h3::after {
+  display:block;
+  width: 70px;
+  height: 70px;
+  content: "";
+  background-image: url("../img/catalog-new.svg");
+}
+
+.slid-two {
   background-color: var(--slider-item-slid2);
 }
 
-.slid3 {
+.slid-two div::after {
+  display:block;
+  width: 75px;
+  height: 61px;
+  content: "";
+  background-image: url("../img/slider/icon-2.svg");
+}
+
+.slid-three {
   background-color: var(--slider-item-slid3);
 }
 
-.slid4 {
+.slid-three div::after {
+  display:block;
+  width: 78px;
+  height: 62px;
+  content: "";
+  background-image: url("../img/slider/icon-3.svg");
+}
+
+.slid-four {
   background-color: var(--slider-item-slid4);
 }
 
-.slid5 {
+.slid-four div::after {
+  display:block;
+  width: 59px;
+  height: 72px;
+  content: "";
+  background-image: url("../img/slider/icon-4.svg");/
+}
+
+.slid-five {
   background-color: var(--slider-item-slid5);
 }
 
+.slid-five div::after {
+  display:block;
+  width: 78px;
+  height: 63px;
+  content: "";
+  background-image: url("../img/slider/icon-5.svg");
+}
+
+.slider-arrow .left {
+  display:block;
+  width: 78px;
+  height: 63px;                                          /*убрать размножение*/
+  content: "";
+  background-image: url("../img/slider/arrow.svg");                              /*не отображается*/
+}
+
+.slider-arrow .right {
+  display:block;
+  width: 78px;
+  height: 63px;                                          /*убрать размножение*/
+  content: "";
+  background-image: url("../img/slider/arrow.svg");                                /*не отображается*/
+  transform: rotate(180deg);
+}
+
+.new::after {
+  display:block;
+  width: 70px;
+  height: 70px;
+  content: "";
+  background-image: url("../img/catalog-new.svg");
+}
 
 .slider-button {
   text-transform: uppercase;
@@ -501,6 +632,15 @@ color: var(--white);                                                /*невид
   line-height: 24px;
 }
 
+.services ul::after {
+  display:block;
+  width: 10px;
+  height: 279px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/sirvis-shadow.svg");
+}
+
+}
 .services h2{
   font-size: 30px;
   line-height: 30px;
@@ -517,6 +657,7 @@ color: var(--white);                                                /*невид
   color: var(--adress-text);
   font-size: 21px;
   line-height: 30px;
+  background-image: url("../img/servis-car.svg") no-repeat;
 }
 
 .services-item:hover {
@@ -585,4 +726,28 @@ color: var(--phone);
 .socials-item:hover
 .socials-item:active {
   background-color: var(--red);
+}
+
+.fb {
+  display:block;
+  width: 26px;
+  height: 15px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-fb.svg");
+}
+
+.insta {
+  display:block;
+  width: 26px;
+  height: 15px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-insta.svg");
+}
+
+.vk {
+  display:block;
+  width: 26px;
+  height: 15px;                                                 /*убрать размножение*/
+  content: "";
+  background-image: url("../img/icon-vk.svg");
 }
