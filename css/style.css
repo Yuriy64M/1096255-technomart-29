@@ -33,9 +33,9 @@
     --slider-item-slid3: #DC91D8;
     --slider-item-slid4: #8ED78F;
     --slider-item-slid5: #FFC047;
-    --slider-item-slid-button: #FFFFFF; /* opacity: 0.3(прозрачность)*/
-    --slider-item-slid-button-focus: #C5C5C5; /* opacity: 0.3(прозрачность)*/
-    --slider-item-slid-button-click: #A9A9A9; /* opacity: 0.3(прозрачность)*/
+    --slider-item-slid-button: rgba(255, 255, 255, 0.3); /* opacity: 0.3(прозрачность)*/
+    --slider-item-slid-button-focus: rgba(197, 197, 197, 0.3); /* opacity: 0.3(прозрачность)*/
+    --slider-item-slid-button-click: rgba(169, 169, 169, 0.3); /* opacity: 0.3(прозрачность)*/
     --slider-picture-head: rgba(0, 0, 0, 0.25);
 
     --popular-head-background: #F9F5F0;
@@ -80,12 +80,24 @@
 }
 
 
-}
+
 /*общее*/
 
 body {
   font-family: "Cuprum", Arial, sans-serif;
   background-color: var(--white);
+}
+
+.page {
+ height: 100%;
+ width: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* align-content: start;*/  /*зачем не понял*/
 }
 
 img {
@@ -97,28 +109,47 @@ img {
     text-decoration: none;
     text-align: center;
     vertical-align: middle;
-    color: var(--white);
+    color: inherit;
     }
 
-/*.logotype {
-  text-align: center;
-  vertical-align: middle;
-  padding: 20px;
+.conteiner {
+grid-column: 2/3;
+
+}
+
+.wrapper {
+
+}
+
+.logotype {
+  width: 220px;
   background-color: var(--red);
-}*/                                                                  /*затемнение?*/
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 15px;
+}
+
+.logotype-footer {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  grid-row: 1/2;
+}
 
 .logotype:active {
   background-color: var(--red-click);
 }
 
-.list {
+.list-reset {
+  padding: 0px;
+  margin: 0px;
   list-style: none;
     }
 
 .heading-catalog {
   font-size: 30px;
-  Line-Height: 30px;
+  line-height: 30px;
   text-transform: uppercase;
+  /*background-color: var(--heading-catalog);*/
 }
 
 /*header*/
@@ -126,27 +157,45 @@ img {
 .main-header {
   background-color: var(--Basic-background); /*background-color-header*/
   color: var(--white);
+  grid-row: 1/2;
+  display: grid;
+  /*grid-template-rows: auto 1fr auto;*/
+  grid-template-columns: 130px auto 130px;
 }
 
 .site-help {
   background-color: var(--navigation-focus);
   font-size: 18px;
-  Line Height: 24px;
+  line-height: 24px;
   font-weight: 400;
   color: var(--white);
+  width: 100%;
+  grid-column: 1/-1;
+
+  display: grid;
+  grid-template-columns: 130px 1fr 130px;
+
+
   }
 
 .site-help li {
-  Font Size: 18px;
-  Line Height: 24px;
+  font-size: 18px;
+  line-height: 24px;
   background-color: var(--navigation-focus);
 }
+
+
 
 .site-help li:hover,
 .site-help li:active {
   background-color: var(--button-header-click);
   color: var(--white);
   opacity: 0.5;
+}
+
+.site-help h2 {
+  display: none;
+
 }
 
 .button-header {
@@ -208,9 +257,10 @@ img {
 }
 
 .search::before {
-  display:block;
-  width:20px;
-  height:20px;                                                 /*убрать размножение*/
+
+  display: block;
+  width: 20px;
+  height: 20px;                                                 /*убрать размножение*/
   content: "";
   background-image: url("../img/icon-search.svg");
 }
@@ -218,6 +268,18 @@ img {
 .check-in {
   background-color: var(--background-color-header);
   color: var(--black);
+
+}
+
+.registration {
+/*
+  grid-column: -1/-3;
+  grid-row: 1/2;*/
+}
+
+.come {
+/*  grid-column: -3/-5;
+  grid-row: 1/2;*/
 }
 
 .check-in:hover {
@@ -320,13 +382,6 @@ text-transform: uppercase;
   text-transform: uppercase;
 }
 
-.heading-catalog {
-  color: var(--navigation);
-  background-color: var(--heading-catalog);
-  Font-Size: 30px;
-  Line-Height: 30px;
-}
-
 .Personal-Area {
   text-decoration: underline;
 }
@@ -343,11 +398,17 @@ text-transform: uppercase;
   Font-Size: 16px;
   Line-Height: 23px;
   color: var(--red);
+/*  grid-column: 1/5;
+  grid-row: 1/3;*/
 }
 
 .phone {
   color: var(--red);
   border: 3px solid var(--white);
+  font-size: 21px;
+  line-height: 30px;
+/*  grid-column: 5/9;
+  grid-row: 1/2;   */              /*телефон выпал из рамки*/
 }
 
 .phone::before {
@@ -358,17 +419,28 @@ text-transform: uppercase;
   background-image: url("../img/icon-phone.svg");
 }
 
+.section-navigation {
+  grid-column: 2/3;
+/*  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(12, 60px);
+  grid-template-rows: 45px auto;
+  gap: 20px;*/
+}
+
 .section-navigation p {
   Font-Size: 14px;
   Line-Height: 24px;
   color: var(--adress-text);
+/*  grid-column: 5/10;
+  grid-row: 2/3;*/
 }
 
 .check-in {
   color: var(--black);
   background-color: var(--white);
-  Font-Size: 21px;                                                      /*не работает*/
-  Line-Height: 21px;                                                      /*не работает*/
+  font-size: 21px;                                                      /*не работает*/
+  line-height: 21px;                                                      /*не работает*/
 }
 
 .come::before {
@@ -389,6 +461,10 @@ text-transform: uppercase;
 
 .main-navigation {
   background-color: var(--navigation);
+  grid-column: 2/3;
+/*  grid-row: 3/-1;
+  display: grid;
+  grid-template-columns: 130px 1fr 130px;*/
 }
 
 .navigation-item:hover {
@@ -402,22 +478,68 @@ text-transform: uppercase;
 
 
 /*main*/
-.slider-list a {
-color: var(--white);                                                /*невидно надписей на кнопках*/
+
+.container {
+  grid-row: 2/3;
+ display: grid;
+ grid-template-rows: repeat(5, auto);
 }
+
+.slider-list {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 123px 123px 123px;
+  gap: 20px;  /*не очень правильно*/
+}
+
+.slider-list a {
+color: var(--white);
+}
+
+.product-row {
+  grid-row: 2/3;
+}
+
+.producer-row {
+  grid-row: 3/4;
+}
+
 
 .slider {
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 130px 1fr 130px;
   color: var(--white);
   Size: 14px;
-  Line-Height: 18px;
-
+  line-height: 18px;
 }
 
-.slid-one {
+.main-slide {
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
+
+.slider-piсture {
+                                           /*кнопки, стрелки, надписи - гридить отдельно*/
+background-color: var(--background-color-header);
+}
+
+.text-piсture-slider {
+  /*z-index: 1;  */          /*как наложить текст на картинку?*/
+}
+
+.slider-piсture img {
+  z-index: 2;             /*как наложить текст на картинку?*/
+}
+
+.slide-one {
+  grid-column: 1/2;
+  grid-row: 1/2;
   background-color: var(--slider-item-slid1);
   }
 
-.slid-one div::after {
+.slide-one div::after {
   display:block;
   width: 44px;
   height: 65px;
@@ -425,7 +547,7 @@ color: var(--white);                                                /*невид
   background-image: url("../img/slider/icon-1.svg");
 }
 
-.slid-one h3::after {
+.slide-one h3::after {
   display:block;
   width: 70px;
   height: 70px;
@@ -433,11 +555,13 @@ color: var(--white);                                                /*невид
   background-image: url("../img/catalog-new.svg");
 }
 
-.slid-two {
+.slide-two {
+  grid-column: 2/3;
+  grid-row: 1/2;
   background-color: var(--slider-item-slid2);
 }
 
-.slid-two div::after {
+.slide-two::after {
   display:block;
   width: 75px;
   height: 61px;
@@ -445,11 +569,13 @@ color: var(--white);                                                /*невид
   background-image: url("../img/slider/icon-2.svg");
 }
 
-.slid-three {
+.slide-three {
+  grid-column: 3/4;
+  grid-row: 1/2;
   background-color: var(--slider-item-slid3);
 }
 
-.slid-three div::after {
+.slide-three div::after {
   display:block;
   width: 78px;
   height: 62px;
@@ -457,11 +583,13 @@ color: var(--white);                                                /*невид
   background-image: url("../img/slider/icon-3.svg");
 }
 
-.slid-four {
+.slide-four {
+  grid-column: 3/4;
+  grid-row: 2/3;
   background-color: var(--slider-item-slid4);
 }
 
-.slid-four div::after {
+.slide-four div::after {
   display:block;
   width: 59px;
   height: 72px;
@@ -469,11 +597,13 @@ color: var(--white);                                                /*невид
   background-image: url("../img/slider/icon-4.svg");/
 }
 
-.slid-five {
+.slide-five {
+  grid-column: 3/4;
+  grid-row: 3/4;
   background-color: var(--slider-item-slid5);
 }
 
-.slid-five div::after {
+.slide-five div::after {
   display:block;
   width: 78px;
   height: 63px;
@@ -481,20 +611,20 @@ color: var(--white);                                                /*невид
   background-image: url("../img/slider/icon-5.svg");
 }
 
-.slider-arrow .left {
+.slider-arrow.left {
   display:block;
   width: 78px;
   height: 63px;                                          /*убрать размножение*/
   content: "";
-  background-image: url("../img/slider/arrow.svg");                              /*не отображается*/
+  background-image: url("../img/slider/arrow.svg");
 }
 
-.slider-arrow .right {
+.slider-arrow.right {
   display:block;
   width: 78px;
   height: 63px;                                          /*убрать размножение*/
   content: "";
-  background-image: url("../img/slider/arrow.svg");                                /*не отображается*/
+  background-image: url("../img/slider/arrow.svg");
   transform: rotate(180deg);
 }
 
@@ -509,7 +639,6 @@ color: var(--white);                                                /*невид
 .slider-button {
   text-transform: uppercase;
   background-color: var(--slider-item-slid-button);
-  opacity: 30%;                                                                /*невидно надписей на кнопках*/
 }
 
 .slider-button:hover {
@@ -523,7 +652,7 @@ color: var(--white);                                                /*невид
 .slider-button-color  {
   text-transform: uppercase;
   color: var(--white);
-  opacity: 100%;                                                                /*невидно надписей на кнопках*/
+
 }
 .button-more:hover {
   color: var(--white);
@@ -548,7 +677,32 @@ color: var(--white);                                                /*невид
   line-height: 30px;
   background-color: var(--popular-head-background);
   text-transform: uppercase;
+  grid-row: 1/2;
+  grid-column: 2/3;
   }
+
+.popular {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 130px 1fr 130px;
+}
+
+.popular-producer-list {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  grid-template-rows: 145px 145px;
+  gap: 20px;
+}
+
+.products-list {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px;
+  gap: 20px;
+}
 
 .products-item {
   border: var(--popular-producer-item-border);
@@ -625,19 +779,76 @@ color: var(--white);                                                /*невид
                                    /*как сделать не понятно*/
 }
 
+.company {
+  grid-row: 6/7;
+  display: grid;
+  grid-template-columns: 130px 1fr 130px;
+}
+
+.company h2 {
+  display: none;
+}
+
+.company-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+.company-discription {
+  grid-column: 1/2;
+}
+
+.contacts {
+  grid-column: 2/3;
+}
+
+.write-us {
+  color: var(--white);
+  background-color: var(--red);
+}
+
 .services {
+  grid-row: 5/6;
   background-color: var(--footer-text-color-nav);
   color: var(--black);
   font-size: 13px;
   line-height: 24px;
+  display: grid;
+  grid-template-columns: 130px 1fr 130px;
+
 }
 
-.services ul::after {
+.services-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.services-conteiner {
+grid-row: 1/2;
+}
+
+.services-list-wrapper {
+  grid-row: 2/3;
+  display: grid;
+  grid-column: auto 1fr;
+}
+
+.services-list {
+  grid-column: 1/2;
+}
+
+.services-discription {
+  grid-column: 2/3;
+}
+
+.services-list::after {
   display:block;
   width: 10px;
   height: 279px;                                                 /*убрать размножение*/
   content: "";
   background-image: url("../img/sirvis-shadow.svg");
+  /*z-index: 2;*/
 }
 
 }
@@ -683,10 +894,30 @@ background-color: var(--footer-background);
 color: var(--Basic-background);
 font-size: 18px;
 line-height: 24px;
+grid-row:  3/4;
+display: grid;
+grid-template-columns: 130px 1fr 130px;
 }
 
 .main-footer p{
 color: var(--phone);
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.footer-navigation {
+  grid-row: 1/2;
+}
+
+.footer-adress {
+  grid-row: 2/3;
+}
+
+.pagination-list {
+  grid-row: 2/3;
 }
 
 .pagination-list a {
@@ -704,8 +935,9 @@ color: var(--phone);
   opacity: 0.5;
 }
 
-.footer-footer {
-  background-color: var(--footer-background);
+.footer-footer {                                              /*потерялся в гридах. */
+  grid-row: 3/4;
+  background-color: var(--navigation-focus);
   color: var(--white);
   font-size: 16px;
   line-height: 18px;
